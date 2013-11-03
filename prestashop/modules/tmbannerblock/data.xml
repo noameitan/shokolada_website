@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<items>
+	<item>
+		<url>index.php?id_product=1&amp;controller=product&amp;id_lang=1#</url>
+		<img>slides/slide0.jpg</img>
+	</item>
+
+	<item>
+		<img>slides/slide1.jpg</img>
+	</item>
+
+	<item>
+		<img>slides/slide2.jpg</img>
+	</item>
+
+</items>

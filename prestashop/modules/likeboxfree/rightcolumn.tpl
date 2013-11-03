@@ -1,0 +1,3 @@
+<div style="display:block; clear:both; border:1px solid #{$likebox.likeboxfree_bordercolor}; {if $likebox.likeboxfree_bgon==1}background:#{$likebox.likeboxfree_bgcolor};{/if}">
+<iframe src="//www.facebook.com/plugins/likebox.php?href={$likebox.likeboxfree_fanpageurl}&amp;width={$likebox.likeboxfree_width}&amp;height={$likebox.likeboxfree_height}&amp;colorscheme={$likebox.likeboxfree_colorscheme}&amp;show_faces={$likebox.likeboxfree_showfaces}&amp;show_border=false&amp;stream={$likebox.likeboxfree_showstream}&amp;header={$likebox.likeboxfree_showheader}&amp;appId=112465995526913" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:{$likebox.likeboxfree_width}px; height:{$likebox.likeboxfree_height}px;" allowTransparency="true"></iframe>
+</div>   

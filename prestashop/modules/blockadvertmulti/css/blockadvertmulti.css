@@ -1,0 +1,9 @@
+div.blockadvmulti {
+	height: auto;
+}
+p.advmulti img {
+	display:block;
+	margin:0 auto;
+	width:auto;
+	margin-bottom:10px;
+}
