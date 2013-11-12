@@ -96,7 +96,7 @@
             <ul id="header_nav" class="clearfix">
 
 	
-<!--
+
                 {if $languages|count > 1}
                     <li id="first_languages">
                         {assign var=langage_inactif_all value=""}
@@ -138,7 +138,7 @@
                         {/if}
                     </li>
                 {/if}
--->
+
 		{if $logged}
 	                <li id="user_info">
 				{l s='Welcome' mod='responsivetopbar'}, <span>{$cookie->customer_firstname} </span>
@@ -333,7 +333,7 @@
                 {if $logged}
                     <a href="{$link->getPageLink('my-account.php', true)}" title="{l s='Your Account' mod='responsivetopbar'}"><span>{$cookie->customer_firstname} {$cookie->customer_lastname}</span></a>
                 {else}
-                    <a href="{$link->getPageLink('my-account.php', true)}">{l s='Welcome22' mod='responsivetopbar'}, {l s='Log in' mod='responsivetopbar'}</a>
+                    <a href="{$link->getPageLink('my-account.php', true)}">{l s='Welcome' mod='responsivetopbar'}, {l s='Log in' mod='responsivetopbar'}</a>
                 {/if}
                 <a href="#" class="flyout-toggle"><span> </span></a>
                 <ul class="flyout">
