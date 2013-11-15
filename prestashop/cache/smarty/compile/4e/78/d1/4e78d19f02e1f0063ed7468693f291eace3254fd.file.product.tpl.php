@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-01 12:11:51
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-14 22:23:28
          compiled from "E:\wamp\www\prestashop\themes\simpleresponsivetheme\product.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3158652737e679dcaf0-74360609%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2167952853140c94cb9-11634724%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4e78d19f02e1f0063ed7468693f291eace3254fd' => 
     array (
       0 => 'E:\\wamp\\www\\prestashop\\themes\\simpleresponsivetheme\\product.tpl',
-      1 => 1380639040,
+      1 => 1384458505,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3158652737e679dcaf0-74360609',
+  'nocache_hash' => '2167952853140c94cb9-11634724',
   'function' => 
   array (
   ),
@@ -110,9 +110,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52737e694c45e5_24793203',
+  'unifunc' => 'content_5285314306c012_30837818',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52737e694c45e5_24793203')) {function content_52737e694c45e5_24793203($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5285314306c012_30837818')) {function content_5285314306c012_30837818($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 if (!is_callable('smarty_modifier_date_format')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.date_format.php';
 if (!is_callable('smarty_function_math')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\function.math.php';
 if (!is_callable('smarty_function_counter')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\function.counter.php';
@@ -535,11 +535,7 @@ $_smarty_tpl->tpl_vars['packItem']->_loop = true;
             <h1 id="product-title" itemprop="name"><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['product']->value->name, 'htmlall', 'UTF-8');?>
 </h1>
         </div>
-        <?php if ($_smarty_tpl->tpl_vars['product']->value->description_short){?>
-            <div id="short_description_content" class="rte align_justify" itemprop="description"><?php echo $_smarty_tpl->tpl_vars['product']->value->description_short;?>
-</div>
-        <?php }?>
-		
+
 		
 		<?php if ($_smarty_tpl->tpl_vars['product']->value->show_price&&!isset($_smarty_tpl->tpl_vars['restricted_country_mode']->value)&&!$_smarty_tpl->tpl_vars['PS_CATALOG_MODE']->value){?>
                     <div class="price">
@@ -557,6 +553,38 @@ $_smarty_tpl->tpl_vars['packItem']->_loop = true;
 </span>
                                 
                             <?php }?>
+
+                      
+                    <p id="reduction_percent" <?php if (!$_smarty_tpl->tpl_vars['product']->value->specificPrice||$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']!='percentage'){?> style="display:none;"<?php }?>><span id="reduction_percent_display"><?php if ($_smarty_tpl->tpl_vars['product']->value->specificPrice&&$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']=='percentage'){?>-<?php echo $_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction']*100;?>
+%<?php }?></span></p>
+                    <p id="reduction_amount" <?php if (!$_smarty_tpl->tpl_vars['product']->value->specificPrice||$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']!='amount'&&intval($_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction'])==0){?> style="display:none"<?php }?>><span id="reduction_amount_display"><?php if ($_smarty_tpl->tpl_vars['product']->value->specificPrice&&$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']=='amount'&&intval($_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction'])!=0){?>-<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['convertPrice'][0][0]->convertPrice(array('price'=>floatval($_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction'])),$_smarty_tpl);?>
+<?php }?></span></p>
+                    <?php if ($_smarty_tpl->tpl_vars['product']->value->specificPrice&&$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction']){?>
+                        <p id="old_price" class="old_price">
+                            <span>
+                                <?php if ($_smarty_tpl->tpl_vars['priceDisplay']->value>=0&&$_smarty_tpl->tpl_vars['priceDisplay']->value<=2){?>
+                                    <?php if ($_smarty_tpl->tpl_vars['productPriceWithoutRedution']->value>$_smarty_tpl->tpl_vars['productPrice']->value){?>
+                                        <span id="old_price_display"><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['convertPrice'][0][0]->convertPrice(array('price'=>$_smarty_tpl->tpl_vars['productPriceWithoutRedution']->value),$_smarty_tpl);?>
+</span>
+                                        
+                                    <?php }?>
+                                <?php }?>
+                            </span>
+                        </p>
+                    <?php }?>
+						
+					<p id="product_reference" <?php if (isset($_smarty_tpl->tpl_vars['groups']->value)||!$_smarty_tpl->tpl_vars['product']->value->reference){?>style="display: none;"<?php }?>>
+                            <label for="product_reference"><?php echo smartyTranslate(array('s'=>'Reference:'),$_smarty_tpl);?>
+ </label>
+                            <span class="editable"><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['product']->value->reference, 'htmlall', 'UTF-8');?>
+</span>
+                        </p>
+
+			<?php if ($_smarty_tpl->tpl_vars['product']->value->description_short){?>
+				<div id="short_description_content" class="rte align_justify" itemprop="description"><?php echo $_smarty_tpl->tpl_vars['product']->value->description_short;?>
+</div>
+			<?php }?>
+							
 <!--
 			    <?php if ($_smarty_tpl->tpl_vars['product']->value->on_sale){?>
                                 <span class="advert"><?php echo smartyTranslate(array('s'=>'On sale!'),$_smarty_tpl);?>
@@ -582,23 +610,6 @@ $_smarty_tpl->tpl_vars['packItem']->_loop = true;
                             </span>
                         <?php }?>
                     </div>
-                    <p id="reduction_percent" <?php if (!$_smarty_tpl->tpl_vars['product']->value->specificPrice||$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']!='percentage'){?> style="display:none;"<?php }?>><span id="reduction_percent_display"><?php if ($_smarty_tpl->tpl_vars['product']->value->specificPrice&&$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']=='percentage'){?>-<?php echo $_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction']*100;?>
-%<?php }?></span></p>
-                    <p id="reduction_amount" <?php if (!$_smarty_tpl->tpl_vars['product']->value->specificPrice||$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']!='amount'&&intval($_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction'])==0){?> style="display:none"<?php }?>><span id="reduction_amount_display"><?php if ($_smarty_tpl->tpl_vars['product']->value->specificPrice&&$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction_type']=='amount'&&intval($_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction'])!=0){?>-<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['convertPrice'][0][0]->convertPrice(array('price'=>floatval($_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction'])),$_smarty_tpl);?>
-<?php }?></span></p>
-                    <?php if ($_smarty_tpl->tpl_vars['product']->value->specificPrice&&$_smarty_tpl->tpl_vars['product']->value->specificPrice['reduction']){?>
-                        <p id="old_price" class="old_price">
-                            <span>
-                                <?php if ($_smarty_tpl->tpl_vars['priceDisplay']->value>=0&&$_smarty_tpl->tpl_vars['priceDisplay']->value<=2){?>
-                                    <?php if ($_smarty_tpl->tpl_vars['productPriceWithoutRedution']->value>$_smarty_tpl->tpl_vars['productPrice']->value){?>
-                                        <span id="old_price_display"><?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['convertPrice'][0][0]->convertPrice(array('price'=>$_smarty_tpl->tpl_vars['productPriceWithoutRedution']->value),$_smarty_tpl);?>
-</span>
-                                        
-                                    <?php }?>
-                                <?php }?>
-                            </span>
-                        </p>
-                    <?php }?>
 
                     <?php if (count($_smarty_tpl->tpl_vars['packItems']->value)&&$_smarty_tpl->tpl_vars['productPrice']->value<$_smarty_tpl->tpl_vars['product']->value->getNoPackPrice()){?>
                         <p class="pack_price old_price">
@@ -630,12 +641,6 @@ $_smarty_tpl->tpl_vars['packItem']->_loop = true;
                     <?php }?>
 
                     <div class="availability_reference"<?php if ((isset($_smarty_tpl->tpl_vars['groups']->value)||!$_smarty_tpl->tpl_vars['product']->value->reference)&&(($_smarty_tpl->tpl_vars['product']->value->quantity<=0&&!$_smarty_tpl->tpl_vars['product']->value->available_later&&$_smarty_tpl->tpl_vars['allow_oosp']->value)||($_smarty_tpl->tpl_vars['product']->value->quantity>0&&!$_smarty_tpl->tpl_vars['product']->value->available_now)||!$_smarty_tpl->tpl_vars['product']->value->available_for_order||$_smarty_tpl->tpl_vars['PS_CATALOG_MODE']->value)){?>style="display: none;"<?php }?>>
-                        <p id="product_reference" <?php if (isset($_smarty_tpl->tpl_vars['groups']->value)||!$_smarty_tpl->tpl_vars['product']->value->reference){?>style="display: none;"<?php }?>>
-                            <label for="product_reference"><?php echo smartyTranslate(array('s'=>'Reference:'),$_smarty_tpl);?>
- </label>
-                            <span class="editable"><?php echo smarty_modifier_escape($_smarty_tpl->tpl_vars['product']->value->reference, 'htmlall', 'UTF-8');?>
-</span>
-                        </p>
 
                         <p id="availability_statut"<?php if (($_smarty_tpl->tpl_vars['product']->value->quantity<=0&&!$_smarty_tpl->tpl_vars['product']->value->available_later&&$_smarty_tpl->tpl_vars['allow_oosp']->value)||($_smarty_tpl->tpl_vars['product']->value->quantity>0&&!$_smarty_tpl->tpl_vars['product']->value->available_now)||!$_smarty_tpl->tpl_vars['product']->value->available_for_order||$_smarty_tpl->tpl_vars['PS_CATALOG_MODE']->value){?> style="display: none;"<?php }?>>
                             <label id="availability_label"><?php echo smartyTranslate(array('s'=>'Availability:'),$_smarty_tpl);?>

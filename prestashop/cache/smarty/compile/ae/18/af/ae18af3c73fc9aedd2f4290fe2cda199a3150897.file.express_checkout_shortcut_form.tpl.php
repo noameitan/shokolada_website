@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-01 12:17:21
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-14 22:23:28
          compiled from "E:\wamp\www\prestashop\modules\paypal\views\templates\hook\express_checkout_shortcut_form.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:234252737fb1680c52-68454198%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:30274528531402401c4-14706796%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '234252737fb1680c52-68454198',
+  'nocache_hash' => '30274528531402401c4-14706796',
   'function' => 
   array (
   ),
@@ -24,9 +24,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52737fb16bf460_03852270',
+  'unifunc' => 'content_528531402866d5_76164649',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52737fb16bf460_03852270')) {function content_52737fb16bf460_03852270($_smarty_tpl) {?><form id="paypal_payment_form" action="<?php echo $_smarty_tpl->tpl_vars['base_dir_ssl']->value;?>
+<?php if ($_valid && !is_callable('content_528531402866d5_76164649')) {function content_528531402866d5_76164649($_smarty_tpl) {?><form id="paypal_payment_form" action="<?php echo $_smarty_tpl->tpl_vars['base_dir_ssl']->value;?>
 modules/paypal/express_checkout/payment.php" data-ajax="false" title="<?php echo smartyTranslate(array('s'=>'Pay with PayPal','mod'=>'paypal'),$_smarty_tpl);?>
 " method="post" data-ajax="false">
 	<?php if (isset($_GET['id_product'])){?><input type="hidden" name="id_product" value="<?php echo $_GET['id_product'];?>

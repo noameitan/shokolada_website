@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-01 12:11:51
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-14 22:23:28
          compiled from "E:\wamp\www\prestashop\modules\responsiveproductshare\views\templates\hook\responsiveproductshare.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1083952737e6754ca60-66512585%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1934452853140365184-21367531%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1083952737e6754ca60-66512585',
+  'nocache_hash' => '1934452853140365184-21367531',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52737e675585e7_51198996',
+  'unifunc' => 'content_52853140370d01_02158747',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52737e675585e7_51198996')) {function content_52737e675585e7_51198996($_smarty_tpl) {?><li id="responsiveshareproduct">
+<?php if ($_valid && !is_callable('content_52853140370d01_02158747')) {function content_52853140370d01_02158747($_smarty_tpl) {?><li id="responsiveshareproduct">
     
     <script type="text/javascript">var switchTo5x=true;</script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>

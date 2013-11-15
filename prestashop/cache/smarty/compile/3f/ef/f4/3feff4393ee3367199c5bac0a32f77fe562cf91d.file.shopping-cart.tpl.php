@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-01 12:17:22
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-06 15:05:12
          compiled from "E:\wamp\www\prestashop\modules\opc\tpl\shopping-cart.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2995552737fb2982926-95175381%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5477527a3e88dc32e5-52772581%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2995552737fb2982926-95175381',
+  'nocache_hash' => '5477527a3e88dc32e5-52772581',
   'function' => 
   array (
   ),
@@ -91,9 +91,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52737fb3890974_48315646',
+  'unifunc' => 'content_527a3e89c19992_67212508',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52737fb3890974_48315646')) {function content_52737fb3890974_48315646($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
+<?php if ($_valid && !is_callable('content_527a3e89c19992_67212508')) {function content_527a3e89c19992_67212508($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 ?>
 
 

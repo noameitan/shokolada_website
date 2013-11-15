@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-01 12:21:16
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-14 22:23:26
          compiled from "E:\wamp\www\prestashop\modules\responsivetopbar\views\templates\hook\responsivetopbar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:230745273809c84b8d5-21601947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:40535285313e0d8445-32895823%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b17f06dad83cd41d69cb63cc7b4ea6f8b01700aa' => 
     array (
       0 => 'E:\\wamp\\www\\prestashop\\modules\\responsivetopbar\\views\\templates\\hook\\responsivetopbar.tpl',
-      1 => 1382380648,
+      1 => 1383919504,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '230745273809c84b8d5-21601947',
+  'nocache_hash' => '40535285313e0d8445-32895823',
   'function' => 
   array (
   ),
@@ -61,9 +61,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5273809d5f22d3_34758567',
+  'unifunc' => 'content_5285313ee1ee68_32527688',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5273809d5f22d3_34758567')) {function content_5273809d5f22d3_34758567($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
+<?php if ($_valid && !is_callable('content_5285313ee1ee68_32527688')) {function content_5285313ee1ee68_32527688($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_escape')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.escape.php';
 if (!is_callable('smarty_modifier_replace')) include 'E:\\wamp\\www\\prestashop\\tools\\smarty\\plugins\\modifier.replace.php';
 ?><div id="header_user">
     <script type="text/javascript">
@@ -183,7 +183,7 @@ if (!is_callable('smarty_modifier_replace')) include 'E:\\wamp\\www\\prestashop\
             <ul id="header_nav" class="clearfix">
 
 	
-<!--
+
                 <?php if (count($_smarty_tpl->tpl_vars['languages']->value)>1){?>
                     <li id="first_languages">
                         <?php $_smarty_tpl->tpl_vars['langage_inactif_all'] = new Smarty_variable('', null, 0);?>
@@ -267,7 +267,7 @@ if (!empty($_capture_buffer)) {
                         <?php }?>
                     </li>
                 <?php }?>
--->
+
 		<?php if ($_smarty_tpl->tpl_vars['logged']->value){?>
 	                <li id="user_info">
 				<?php echo smartyTranslate(array('s'=>'Welcome','mod'=>'responsivetopbar'),$_smarty_tpl);?>
@@ -575,7 +575,7 @@ icon/delete.gif" alt="<?php echo smartyTranslate(array('s'=>'Delete','mod'=>'res
 </span></a>
                 <?php }else{ ?>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['link']->value->getPageLink('my-account.php',true);?>
-"><?php echo smartyTranslate(array('s'=>'Welcome22','mod'=>'responsivetopbar'),$_smarty_tpl);?>
+"><?php echo smartyTranslate(array('s'=>'Welcome','mod'=>'responsivetopbar'),$_smarty_tpl);?>
 , <?php echo smartyTranslate(array('s'=>'Log in','mod'=>'responsivetopbar'),$_smarty_tpl);?>
 </a>
                 <?php }?>

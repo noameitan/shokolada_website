@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-23 00:32:05
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-08 15:25:38
          compiled from "E:\wamp\www\prestashop\modules\blockcustomerprivacy\blockcustomerprivacy.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9250523f61d5b342c7-15006700%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:24801527ce6525903a6-99161204%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9250523f61d5b342c7-15006700',
+  'nocache_hash' => '24801527ce6525903a6-99161204',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_523f61d5b4b9d0_50036610',
+  'unifunc' => 'content_527ce6525d68b8_03137390',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_523f61d5b4b9d0_50036610')) {function content_523f61d5b4b9d0_50036610($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_527ce6525d68b8_03137390')) {function content_527ce6525d68b8_03137390($_smarty_tpl) {?>
 
 <div class="error_customerprivacy" style="color:red;"></div>
 <fieldset class="account_creation customerprivacy">
