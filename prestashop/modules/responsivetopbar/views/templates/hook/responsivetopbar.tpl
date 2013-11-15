@@ -82,9 +82,9 @@
 	    {if $logged}
 	        {l s='Welcome' mod='responsivetopbar'},
                 <span>{$cookie->customer_firstname} </span>
-                (<a href="{$link->getPageLink('index.php')}?mylogout" title="{l s='Log me out' mod='responsivetopbar'}">{l s='יציאה' mod='responsivetopbar'}</a>)
-            {else}
-                <a href="{$link->getPageLink('my-account.php', true)}">{l s='התחברות' mod='responsivetopbar'}</a>
+   		(<a href="{$link->getPageLink('index.php')}?mylogout" title="{l s='Log me out' mod='responsivetopbar'}">{l s='Log out' mod='responsivetopbar'}</a>)
+	    {else}
+		<a href="{$link->getPageLink('my-account.php', true)}">{l s='Log in' mod='responsivetopbar'}</a>
             {/if}
 -->
 	</p>
@@ -145,23 +145,25 @@
 			</li>
 
 			<li id="your_account">
-				<a href="{$link->getPageLink('my-account.php', true)}" title="{l s='החשבון שלי' mod='responsivetopbar'}">{l s='החשבון שלי' mod='responsivetopbar'}</a></li>
+				<a href="{$link->getPageLink('my-account.php', true)}" title="{l s='Your Account' mod='responsivetopbar'}">{l s='Your Account' mod='responsivetopbar'}</a></li>
 		{/if}
 
 		<li id="login_logout">
 			{if $logged}
-				<a href="{$link->getPageLink('index.php')}?mylogout" title="{l s='Log me out' mod='responsivetopbar'}">{l s='יציאה' mod='responsivetopbar'}</a>
+				<a href="{$link->getPageLink('index.php')}?mylogout" title="{l s='Log me out' mod='responsivetopbar'}">{l s='log out' mod='responsivetopbar'}</a>
 			{else}
-				<a href="{$link->getPageLink('my-account.php', true)}">{l s='התחברות' mod='responsivetopbar'}</a>
+				<a href="{$link->getPageLink('my-account.php', true)}">{l s='log in' mod='responsivetopbar'}</a>
 			{/if}
+
+
 
                 {if !$PS_CATALOG_MODE}
                 <li id="shopping_cart">
                     <a href="{$link->getPageLink("$order_process.php", true)}">
 			{l s='shopping_cart' mod='responsivetopbar'}
                         <span class="ajax_cart_quantity{if $cart_qties == 0} hidden{/if}">{$cart_qties}</span>
-                        <span class="ajax_cart_product_txt{if $cart_qties != 1} hidden{/if}">{l s='פריט' mod='responsivetopbar'}</span> 
-                        <span class="ajax_cart_product_txt_s{if $cart_qties < 2} hidden{/if}">{l s='פריטים' mod='responsivetopbar'}</span>
+                        <span class="ajax_cart_product_txt{if $cart_qties != 1} hidden{/if}">{l s='product' mod='responsivetopbar'}</span> 
+			<span class="ajax_cart_product_txt_s{if $cart_qties < 2} hidden{/if}">{l s='products' mod='responsivetopbar'}</span>
 <!--                        {if $cart_qties >= 0}
                             <span class="ajax_cart_total{if $cart_qties == 0} hidden{/if}">
                                 {if $priceDisplay == 1}
@@ -174,7 +176,7 @@
 -->
                             </span>
                         {/if}
-                        <span class="ajax_cart_no_product{if $cart_qties > 0} hidden{/if}"> {l s='0 פריטים' mod='responsivetopbar'}</span>
+                        <span class="ajax_cart_no_product{if $cart_qties > 0} hidden{/if}"> {l s='empty' mod='responsivetopbar'}</span>
 <!--
 			<img src="{$img_dir}icon/arrow-29-16-up.png" class="dropdown up" alt=""/>
                         <img src="{$img_dir}icon/arrow-29-16-down.png" class="dropdown down hidden" alt=""/>
