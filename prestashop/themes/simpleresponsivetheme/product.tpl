@@ -266,10 +266,7 @@
         <div id="product-information">
             <h1 id="product-title" itemprop="name">{$product->name|escape:'htmlall':'UTF-8'}</h1>
         </div>
-        {if $product->description_short}
-            <div id="short_description_content" class="rte align_justify" itemprop="description">{$product->description_short}</div>
-        {/if}
-		
+
 		
 		{if $product->show_price AND !isset($restricted_country_mode) AND !$PS_CATALOG_MODE}
                     <div class="price">
@@ -288,6 +285,34 @@
                                     {if $priceDisplay == 1}{l s='tax excl.'}{else}{l s='tax incl.'}{/if}
                                 {/if}*}
                             {/if}
+
+                      
+                    <p id="reduction_percent" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}><span id="reduction_percent_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}</span></p>
+                    <p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' && $product->specificPrice.reduction|intval ==0} style="display:none"{/if}><span id="reduction_amount_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'amount' && $product->specificPrice.reduction|intval !=0}-{convertPrice price=$product->specificPrice.reduction|floatval}{/if}</span></p>
+                    {if $product->specificPrice AND $product->specificPrice.reduction}
+                        <p id="old_price" class="old_price">
+                            <span>
+                                {if $priceDisplay >= 0 && $priceDisplay <= 2}
+                                    {if $productPriceWithoutRedution > $productPrice}
+                                        <span id="old_price_display">{convertPrice price=$productPriceWithoutRedution}</span>
+                                        {*{if $tax_enabled && $display_tax_label == 1}
+                                            {if $priceDisplay == 1}{l s='tax excl.'}{else}{l s='tax incl.'}{/if}
+                                        {/if}*}
+                                    {/if}
+                                {/if}
+                            </span>
+                        </p>
+                    {/if}
+						
+					<p id="product_reference" {if isset($groups) OR !$product->reference}style="display: none;"{/if}>
+                            <label for="product_reference">{l s='Reference:'} </label>
+                            <span class="editable">{$product->reference|escape:'htmlall':'UTF-8'}</span>
+                        </p>
+
+			{if $product->description_short}
+				<div id="short_description_content" class="rte align_justify" itemprop="description">{$product->description_short}</div>
+			{/if}
+							
 <!--
 			    {if $product->on_sale}
                                 <span class="advert">{l s='On sale!'}</span>
@@ -308,22 +333,6 @@
                             </span>
                         {/if}
                     </div>
-                    <p id="reduction_percent" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'percentage'} style="display:none;"{/if}><span id="reduction_percent_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'percentage'}-{$product->specificPrice.reduction*100}%{/if}</span></p>
-                    <p id="reduction_amount" {if !$product->specificPrice OR $product->specificPrice.reduction_type != 'amount' && $product->specificPrice.reduction|intval ==0} style="display:none"{/if}><span id="reduction_amount_display">{if $product->specificPrice AND $product->specificPrice.reduction_type == 'amount' && $product->specificPrice.reduction|intval !=0}-{convertPrice price=$product->specificPrice.reduction|floatval}{/if}</span></p>
-                    {if $product->specificPrice AND $product->specificPrice.reduction}
-                        <p id="old_price" class="old_price">
-                            <span>
-                                {if $priceDisplay >= 0 && $priceDisplay <= 2}
-                                    {if $productPriceWithoutRedution > $productPrice}
-                                        <span id="old_price_display">{convertPrice price=$productPriceWithoutRedution}</span>
-                                        {*{if $tax_enabled && $display_tax_label == 1}
-                                            {if $priceDisplay == 1}{l s='tax excl.'}{else}{l s='tax incl.'}{/if}
-                                        {/if}*}
-                                    {/if}
-                                {/if}
-                            </span>
-                        </p>
-                    {/if}
 
                     {if $packItems|@count && $productPrice < $product->getNoPackPrice()}
                         <p class="pack_price old_price">
@@ -345,10 +354,6 @@
                     {/if}
 
                     <div class="availability_reference"{if (isset($groups) OR !$product->reference) && (($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE)}style="display: none;"{/if}>
-                        <p id="product_reference" {if isset($groups) OR !$product->reference}style="display: none;"{/if}>
-                            <label for="product_reference">{l s='Reference:'} </label>
-                            <span class="editable">{$product->reference|escape:'htmlall':'UTF-8'}</span>
-                        </p>
 
                         <p id="availability_statut"{if ($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
                             <label id="availability_label">{l s='Availability:'}</label>
