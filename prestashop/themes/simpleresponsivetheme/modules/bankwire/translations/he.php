@@ -23,7 +23,7 @@ $_MODULE['<{bankwire}simpleresponsivetheme>bankwire_b17f3f4dcf653a5776792498a9b4
 $_MODULE['<{bankwire}simpleresponsivetheme>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = 'שיטת תשלום זו אינה זמינה';
 $_MODULE['<{bankwire}simpleresponsivetheme>payment_execution_99227bacb2b4dfa29ce1701ac265a923'] = 'תשלום ע\"י צק';
 $_MODULE['<{bankwire}simpleresponsivetheme>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = 'פירוט הזמנה';
-$_MODULE['<{bankwire}simpleresponsivetheme>payment_execution_879f6b8877752685a966564d072f498f'] = 'עגלת הקניות שלך ריקה';
+$_MODULE['<{bankwire}simpleresponsivetheme>payment_execution_879f6b8877752685a966564d072f498f'] = 'סל הקניות שלך ריקה';
 $_MODULE['<{bankwire}simpleresponsivetheme>payment_execution_05adcee99142c1a60fb38bb1330bbbc1'] = 'צ\"ק';
 $_MODULE['<{bankwire}simpleresponsivetheme>payment_execution_afda466128ee0594745d9f8152699b74'] = 'בקשת לשלם בהעברה בנקאית';
 $_MODULE['<{bankwire}simpleresponsivetheme>payment_execution_c884ed19483d45970c5bf23a681e2dd2'] = 'תקציר של ההזמנה שלך';
