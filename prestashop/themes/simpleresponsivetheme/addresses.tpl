@@ -91,12 +91,12 @@
 {include file="$tpl_dir./breadcrumb.tpl"}
 
 <h1>{l s='My addresses'}</h1>
-<p>{l s='Please configure your default billing and delivery addresses when placing an order. You may also add additional addresses, which can be useful for sending gifts or receiving an order at your office.'}</p>
+{* noam remove caption   <p>{l s='Please configure your default billing and delivery addresses when placing an order. You may also add additional addresses, which can be useful for sending gifts or receiving an order at your office.'}</p>*}
 
 {if isset($multipleAddresses) && $multipleAddresses}
 <div class="addresses">
-    <h3>{l s='Your addresses are listed below.'}</h3>
-    <p>{l s='Be sure to update them if they have changed.'}</p>
+    {* noam remove caption   <h3>{l s='Your addresses are listed below.'}</h3>
+	<p>{l s='Be sure to update them if they have changed.'}</p> *}
     {assign var="adrs_style" value=$addresses_style}
     <ul class="block-grid three-up mobile-two-up">
     {foreach from=$multipleAddresses item=address name=myLoop}

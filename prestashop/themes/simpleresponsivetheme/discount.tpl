@@ -35,9 +35,9 @@
             <th class="discount_code first_item">{l s='Code'}</th>
             <th class="discount_description item">{l s='Description'}</th>
             <th class="discount_quantity item">{l s='Quantity'}</th>
-            <th class="discount_value item">{l s='Value'}*</th>
-            <th class="discount_minimum item">{l s='Minimum'}</th>
-            <th class="discount_cumulative item">{l s='Cumulative'}</th>
+            <th class="discount_value item">{l s='Value'}</th>
+{* noam remove col            <th class="discount_minimum item">{l s='Minimum'}</th> *}
+{* noam remove col           <th class="discount_cumulative item">{l s='Cumulative'}</th> *}
             <th class="discount_expiration_date last_item">{l s='Expiration date'}</th>
         </tr>
     </thead>
@@ -58,6 +58,7 @@
                     -
                 {/if}
             </td>
+{* noam remove col
             <td class="discount_minimum">
                 {if $discountDetail.minimal == 0}
                     {l s='None'}
@@ -72,14 +73,17 @@
                     <img src="{$img_dir}icon/no.gif" alt="{l s='No'}" class="icon" valign="middle" /> {l s='No'}
                 {/if}
             </td>
+*}
             <td class="discount_expiration_date">{dateFormat date=$discountDetail.date_to}</td>
         </tr>
     {/foreach}
     </tbody>
 </table>
+{* noam remove remark
 <p>
     *{l s='Tax included'}
 </p>
+*}
 {else}
     <p class="warning">{l s='You do not have any vouchers.'}</p>
 {/if}

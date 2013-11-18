@@ -185,7 +185,7 @@ $(function(){ldelim}
                     </p>
                     <p class="submit">
                         {if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'htmlall':'UTF-8'}" />{/if}
-                        <input type="button" id="SubmitCreate" name="SubmitCreate" class="button_large button radius" value="{l s='Create your account'}" />
+                        <input type="button" id="SubmitCreate" name="SubmitCreate" class="button_large button radius" value="{l s='Create your account button'}" />
                         <input type="hidden" class="hidden" name="SubmitCreate" value="{l s='Create your account'}" />
                     </p>
                 </div>
@@ -262,10 +262,12 @@ $(function(){ldelim}
                                 <input type="checkbox" name="newsletter" id="newsletter" value="1" {if isset($smarty.post.newsletter) && $smarty.post.newsletter == '1'}checked="checked"{/if}>
                                 <label for="newsletter">{l s='Sign up for our newsletter'}</label>
                             </p>
+			    {*noam remove checkbox for special offers from our partners
                             <p class="checkbox">
                                 <input type="checkbox" name="optin" id="optin" value="1" {if isset($smarty.post.optin) && $smarty.post.optin == '1'}checked="checked"{/if}>
                                 <label for="optin">{l s='Receive special offers from our partners'}</label>
                             </p>
+			    *}
                         {/if}
                     </div>
                     <div class="six columns">
@@ -380,6 +382,7 @@ $(function(){ldelim}
         <div class="six columns">
             {$HOOK_CREATE_ACCOUNT_TOP}
             <fieldset class="">
+	    {* moam remove gender and caption
                 <h3>{l s='Your personal information'}</h3>
                 <p class="radio required">
                     <span>{l s='Title'}</span>
@@ -388,6 +391,7 @@ $(function(){ldelim}
                         <label for="id_gender{$gender->id}" class="top">{$gender->name}</label>
                     {/foreach}
                 </p>
+	*}
                 <p class="required text">
                     <label for="customer_firstname">{l s='First name'} <sup>*</sup></label>
                     <input onkeyup="$('#firstname').val(this.value);" type="text" class="text" id="customer_firstname" name="customer_firstname" value="{if isset($smarty.post.customer_firstname)}{$smarty.post.customer_firstname}{/if}" />
@@ -409,6 +413,7 @@ $(function(){ldelim}
                     <input type="password" class="text" name="passwd" id="passwd" />
                     <p class="form_info">{l s='(5 characters min.)'}</p>
                 </p>
+		{* remove birthdate
                 <p class="select">
                     <label>{l s='Date of Birth'}</label>
                     <select id="days" name="days">
@@ -431,6 +436,7 @@ $(function(){ldelim}
                         {l s='November'}
                         {l s='December'}
                     *}
+		    {* re-open remark
                     <select id="months" name="months">
                         <option value="">-</option>
                         {foreach from=$months key=k item=month}
@@ -443,16 +449,19 @@ $(function(){ldelim}
                             <option value="{$year}" {if ($sl_year == $year)} selected="selected"{/if}>{$year}&nbsp;&nbsp;</option>
                         {/foreach}
                     </select>
+		    *}
                 </p>
                 {if $newsletter}
                 <p class="checkbox" >
                     <input type="checkbox" name="newsletter" id="newsletter" value="1" {if isset($smarty.post.newsletter) AND $smarty.post.newsletter == 1} checked="checked"{/if} />
                     <label for="newsletter">{l s='Sign up for our newsletter'}</label>
                 </p>
+		{* noam remove speciel offers
                 <p class="checkbox" >
                     <input type="checkbox"name="optin" id="optin" value="1" {if isset($smarty.post.optin) AND $smarty.post.optin == 1} checked="checked"{/if} />
                     <label for="optin">{l s='Receive special offers from our partners'}</label>
                 </p>
+		*}
                 {/if}
             </fieldset>
         </div>

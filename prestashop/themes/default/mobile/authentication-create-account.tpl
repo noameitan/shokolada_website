@@ -1,6 +1,7 @@
 <form action="{$link->getPageLink('authentication', true)|escape:'html'}" method="post" id="account-creation_form" class="std" data-ajax="false">
 	{$HOOK_CREATE_ACCOUNT_TOP}
 	<fieldset class="account_creation">
+	{* noam remove caption and gender
 		<h3>{l s='Your personal information'}</h3>
 		<p class="radio required">
 			<label>{l s='Title'}</label>
@@ -9,6 +10,7 @@
 				<label for="id_gender{$gender->id}" class="top">{$gender->name}</label>
 			{/foreach}
 		</p>
+	*}
 		<p class="required">
 			<label for="customer_firstname">{l s='First name'} <sup>*</sup></label>
 			<input onkeyup="$('#firstname').val(this.value);" type="text" class="text" id="customer_firstname" name="customer_firstname" value="{if isset($smarty.post.customer_firstname)}{$smarty.post.customer_firstname}{/if}" />

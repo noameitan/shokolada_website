@@ -37,19 +37,23 @@
         {if isset($pwd_changed)}<br />{l s='Your password has been sent to your e-mail:'} {$email}{/if}
     </p>
 {else}
+  {* noam remove caption
     <h3>{l s='Please be sure to update your personal information if it has changed.'}</h3>
+  *}
     <p class="required"><sup>*</sup>{l s='Required field'}</p>
     <form action="{$link->getPageLink('identity', true)}" method="post" class="">
         <fieldset>
             <div class="row">
                 <div class="six columns">
-                    <p class="radio">
+                    {* noam remove gender
+		    <p class="radio">
                         <span>{l s='Title'}</span>
                         {foreach from=$genders key=k item=gender}
                             <input type="radio" name="id_gender" id="id_gender{$gender->id}" value="{$gender->id|intval}" {if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id}checked="checked"{/if} />
                             <label for="id_gender{$gender->id}" class="top">{$gender->name}</label>
                         {/foreach}
                     </p>
+		    *}
                     <p class="required text">
                         <label for="firstname">{l s='First name'} <sup>*</sup></label>
                         <input type="text" id="firstname" name="firstname" value="{$smarty.post.firstname}" />
@@ -76,6 +80,7 @@
                         <label for="confirmation">{l s='Confirmation'}</label>
                         <input type="password" name="confirmation" id="confirmation" />
                     </p>
+		      {* noam remove birthday
                     <p class="select">
                         <label>{l s='Date of Birth'}</label>
                         <select name="days" id="days">
@@ -84,7 +89,7 @@
                                 <option value="{$v}" {if ($sl_day == $v)}selected="selected"{/if}>{$v}&nbsp;&nbsp;</option>
                             {/foreach}
                         </select>
-                        {*
+                        {* noam open remark again
                             {l s='January'}
                             {l s='February'}
                             {l s='March'}
@@ -98,6 +103,7 @@
                             {l s='November'}
                             {l s='December'}
                         *}
+			{*
                         <select id="months" name="months">
                             <option value="">-</option>
                             {foreach from=$months key=k item=v}
@@ -111,15 +117,18 @@
                             {/foreach}
                         </select>
                     </p>
+		    *}
                     {if $newsletter}
                     <p class="checkbox">
                         <input type="checkbox" id="newsletter" name="newsletter" value="1" {if isset($smarty.post.newsletter) && $smarty.post.newsletter == 1} checked="checked"{/if} />
                         <label for="newsletter">{l s='Sign up for our newsletter'}</label>
                     </p>
+		    {* noam remove offers from parteners
                     <p class="checkbox">
                         <input type="checkbox" name="optin" id="optin" value="1" {if isset($smarty.post.optin) && $smarty.post.optin == 1} checked="checked"{/if} />
                         <label for="optin">{l s='Receive special offers from our partners'}</label>
                     </p>
+		    *}
                     {/if}
                     <p class="submit">
                         <input type="submit" class="button radius" name="submitIdentity" value="{l s='Save'}" />
