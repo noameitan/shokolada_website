@@ -33,7 +33,7 @@
         {l s='Your account has been created.'}
     </p>
 {/if}
-<h4>{l s='Welcome to your account. Here, you can manage your addresses and orders.'}</h4>
+{* <h4>{l s='Welcome to your account. Here, you can manage your addresses and orders.'}</h4> noame remove the header *}
 <ul class="myaccount_lnk_list block-grid two-up mobile-one-up">
     {if $has_customer_an_address}
     <li><a href="{$link->getPageLink('address', true)}" title="{l s='Add my first address'}"><img src="{$img_dir}icon/addrbook.gif" alt="{l s='Add my first address'}" class="icon" /> {l s='Add my first address'}</a></li>
@@ -42,7 +42,9 @@
     {if $returnAllowed}
         <li><a href="{$link->getPageLink('order-follow', true)}" title="{l s='Merchandise returns'}"><img src="{$img_dir}icon/return.gif" alt="{l s='Merchandise returns'}" class="icon" /> {l s='My merchandise returns'}</a></li>
     {/if}
+    {* noam remove credit slips
     <li><a href="{$link->getPageLink('order-slip', true)}" title="{l s='Credit slips'}"><img src="{$img_dir}icon/slip.gif" alt="{l s='Credit slips'}" class="icon" /> {l s='My credit slips'}</a></li>
+    *}
     <li><a href="{$link->getPageLink('addresses', true)}" title="{l s='Addresses'}"><img src="{$img_dir}icon/addrbook.gif" alt="{l s='Addresses'}" class="icon" /> {l s='My addresses'}</a></li>
     <li><a href="{$link->getPageLink('identity', true)}" title="{l s='Information'}"><img src="{$img_dir}icon/userinfo.gif" alt="{l s='Information'}" class="icon" /> {l s='My personal information'}</a></li>
     {if $voucherAllowed}
