@@ -40,7 +40,7 @@
 	{include file="$tpl_dir./breadcrumb.tpl"}
 {/if}
 
-{if !$opc}<h1>{l s='Choose your payment method'}</h1>{else}<p class="onestepcheckout-numbers onestepcheckout-numbers-4">{l s='Payment method' mod='opc'}</p>{/if}
+{if !$opc}<h1>{l s='Choose your payment method'}</h1>{else}<p class="onestepcheckout-numbers onestepcheckout-numbers-4">{l s='Payment methodXXX' mod='opc'}</p>{/if}
 
 {if $conditions AND $cms_id}
 	<p class="checkbox">

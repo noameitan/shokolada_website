@@ -167,7 +167,7 @@ var freeShippingTranslationOPC = '{l s='Free!' mod='opc' js=1}';
 					</tr>
 				{/if}
 			{/if}
-
+			{* noam remove tax
 			<tr class="cart_total_price">
 				<td colspan="3">{l s='Total (tax excl.):'}</td>
 				<td colspan="1" class="price" id="total_price_without_tax">{displayPrice price=$total_price_without_tax}</td>
@@ -176,6 +176,7 @@ var freeShippingTranslationOPC = '{l s='Free!' mod='opc' js=1}';
 				<td colspan="3">{l s='Total tax:'}</td>
 				<td colspan="1" class="price" id="total_tax">{displayPrice price=$total_tax}</td>
 			</tr>
+			*}
 			<tr class="cart_total_price">
 				<td colspan="3" id="cart_voucher" class="cart_voucher">
 				{if $voucherAllowed}

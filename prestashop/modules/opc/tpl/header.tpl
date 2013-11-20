@@ -92,8 +92,9 @@
 					<fieldset class="group-select">
 						
 						<h1 class="onestepcheckout-title">{l s='Express Checkout Lane' mod='opc'}</h1>
+						{* noam remove caption
 						<p class="onestepcheckout-description">{l s='Please enter your details below to complete your purchase.' mod='opc'}</p>
-					
+						*}
 						<div class="onestepcheckout-threecolumns checkoutcontainer">
 
 							<!-- Center -->
