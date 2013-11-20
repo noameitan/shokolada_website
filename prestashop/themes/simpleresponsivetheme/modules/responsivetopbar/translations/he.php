@@ -2,7 +2,9 @@
 
 global $_MODULE;
 $_MODULE = array();
+$_MODULE['<{responsivetopbar}simpleresponsivetheme>responsivetopbar - copy_e7a6ca4e744870d455a57b644f696457'] = 'חינם!';
 $_MODULE['<{responsivetopbar}simpleresponsivetheme>responsivetopbar - copy_83218ac34c1834c26781fe4bde918ee4'] = 'שלום';
+$_MODULE['<{responsivetopbar}simpleresponsivetheme>responsivetopbar_e7a6ca4e744870d455a57b644f696457'] = 'חינם!';
 $_MODULE['<{responsivetopbar}simpleresponsivetheme>responsivetopbar_83218ac34c1834c26781fe4bde918ee4'] = 'שלום';
 $_MODULE['<{responsivetopbar}simpleresponsivetheme>responsivetopbar_bffe9a3c9a7e00ba00a11749e022d911'] = 'התחברות';
 $_MODULE['<{responsivetopbar}simpleresponsivetheme>responsivetopbar_a0623b78a5f2cfe415d9dbbd4428ea40'] = 'החשבון שלי';

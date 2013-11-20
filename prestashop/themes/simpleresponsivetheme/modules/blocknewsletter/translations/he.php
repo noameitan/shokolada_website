@@ -26,4 +26,4 @@ $_MODULE['<{blocknewsletter}simpleresponsivetheme>blocknewsletter_77c576a354d5d6
 $_MODULE['<{blocknewsletter}simpleresponsivetheme>blocknewsletter_99c8b8e5e51bf8f00f1d66820684be9a'] = 'אימייל כבר רשום או שאינו חוקי';
 $_MODULE['<{blocknewsletter}simpleresponsivetheme>blocknewsletter_4e1c51e233f1ed368c58db9ef09010ba'] = 'תודה שנרשמת לרשימת התפוצה שלנו';
 $_MODULE['<{blocknewsletter}simpleresponsivetheme>blocknewsletter_ffb7e666a70151215b4c55c6268d7d72'] = 'ידיעון';
-$_MODULE['<{blocknewsletter}simpleresponsivetheme>blocknewsletter_416f61a2ce16586f8289d41117a2554e'] = 'כתובת אימייל שלך';
+$_MODULE['<{blocknewsletter}simpleresponsivetheme>blocknewsletter_416f61a2ce16586f8289d41117a2554e'] = 'כתובת מייל';

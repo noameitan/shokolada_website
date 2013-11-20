@@ -39,7 +39,7 @@
                     </select>*}
                 </div>
                 <div class="two mobile-one columns">
-                    <input type="submit" value="Ok" class="button expand postfix submitNewsletter" name="submitNewsletter" />
+                    <input type="submit" value="Ok111" class="button expand postfix submitNewsletter" name="submitNewsletter" />
                     <input type="hidden" name="action" value="0" />
                 </div>
             </div>
