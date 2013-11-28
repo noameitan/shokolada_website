@@ -1,3 +1,38 @@
+.category-banner{
+    position:relative;
+    text-align:right;
+    width:789px;
+    color:#fff;
+    font:13px/16px Arial, sans-serif;
+    margin:0 0 20px;
+    overflow:hidden;
+}
+.category-banner .category-text{
+    position:absolute;
+    left:0;
+    top:0;
+    width:711px;
+    padding:40px 58px 0 20px;
+}
+.category-banner h2{
+    letter-spacing:4px;
+    padding:0 0 12px;
+    margin:0 -3px 0 14px;
+    color:#fff;
+    position:relative;
+    z-index:2;
+    font:45px/45px 'FbKalisher-Regular', Arial, sans-serif;
+}
+.category-banner p{
+    border-top:2px solid #fff;
+    position:relative;
+    float:right;
+    z-index:2;
+    padding:14px 0 0 3px;
+    clear:both;
+}
+
+
 .content_scene_cat {
     padding:5px;
 /*    border:1px solid #ccc;*/

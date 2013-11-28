@@ -52,12 +52,16 @@
             {else}
                 <!-- Category image -->
                 {if $category->id_image}
-                <div class="align_center">
+                <div class="category-banner">
                     <img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')}" alt="{$category->name|escape:'htmlall':'UTF-8'}" title="{$category->name|escape:'htmlall':'UTF-8'}" id="categoryImage" width="790" height="240" />
-				</div>
+			<div class="category-text">
+			<h2 style="color:black;"> {$category->name|escape:'htmlall':'UTF-8'}</h2>    
+			<p style="width: 400px;color:black;border-top: 2px solid #000;position: relative;float: right;z-index: 2;padding: 14px 0 0 3px;">{$category->description}</p>
+	</div>
+		</div>
                 {/if}
             {/if}
-
+{*
             {if $category->description}
                 <div class="cat_desc align_center">
                 {if strlen($category->description) > 120}
@@ -69,6 +73,7 @@
                 {/if}
                 </div>
             {/if}
+*}
         </div>
 	{/if}
 

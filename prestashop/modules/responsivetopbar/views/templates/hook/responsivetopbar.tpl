@@ -16,69 +16,8 @@
             <img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if} />
         </a>
  
- <!-- -------------------------------------------------------------------- -->
-
-  <!--
-<div class="abc">
-	<div class="content">
-		<p>text</p>
-		<p>text</p>
-		<p class="last" style="background:red">bla bla</p>
-	</div>
-</div>
- -->
-
-  <!--
  
-
-<div class="shipping-info-dwondown1" id="shipping-info-dropdown">
-	<div id="shipping-info" class="shipping-info">
-		<div>&nbsp;</div>
-		<div class="shipping-contai">
-			<h55>עלויות משלוח</h55>
-				<ul>
-					<li>דואר רשום לסניף הקרוב לביתך - חינם בהזמנה מעל 59 ש"ח</li>
-					<li>שליח עד הבית - 9 ש"ח</li>
-					<li>משלוח הפריט ממך אלינו, במקרה של החלפה או החזרה - חינם.</li>
-				</ul>
-			<div>&nbsp;</div>
-			<div><a href="http://www.adikastyle.com/delivery-and-returns/">קראי את מדיניות ההחלפה שלנו</a></div>
-			<div>&nbsp;</div>
-			<div id="closeit"><img src="http://www.adikastyle.com/media/x.png" alt=""></div>
-			<div class="dropdown-control">משלוחים והחזרות חינם!</div>
-		</div>
-	</div>				
-</div>
- 
-
- 
- <script type="text/javascript">		
-{literal}
- $(".dropdown-control1").click(function(e){
-					jQuery("#shipping-info").animate({height:290},500);
-						e.stopImmediatePropagation();
-
-						});
-					jQuery("#closeit,.shipping-contai").click(function(e) {
-
-					jQuery("#shipping-info").animate({height:5},300);
-						e.stopImmediatePropagation();
-
-					});
-{/literal}
-					</script>
-
-  -->					
- <!-- ---------------------------------------------------- -->
- 
- 
- 
- 
- 
- 
- 
- 
-<!--
+{*
 	    {if $logged}
 	        {l s='Welcome' mod='responsivetopbar'},
                 <span>{$cookie->customer_firstname} </span>
@@ -86,7 +25,7 @@
 	    {else}
 		<a href="{$link->getPageLink('my-account.php', true)}">{l s='Log in' mod='responsivetopbar'}</a>
             {/if}
--->
+*}
 	</p>
 
 	
@@ -96,7 +35,7 @@
             <ul id="header_nav" class="clearfix">
 
 	
-
+{*
                 {if $languages|count > 1}
                     <li id="first_languages">
                         {assign var=langage_inactif_all value=""}
@@ -138,7 +77,7 @@
                         {/if}
                     </li>
                 {/if}
-
+*}
 		{if $logged}
 	                <li id="user_info">
 				{l s='Welcome' mod='responsivetopbar'}, <span>{$cookie->customer_firstname} </span>
