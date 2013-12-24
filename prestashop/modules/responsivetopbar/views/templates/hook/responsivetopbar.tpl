@@ -35,7 +35,7 @@
             <ul id="header_nav" class="clearfix">
 
 	
-{*
+
                 {if $languages|count > 1}
                     <li id="first_languages">
                         {assign var=langage_inactif_all value=""}
@@ -77,7 +77,7 @@
                         {/if}
                     </li>
                 {/if}
-*}
+
 		{if $logged}
 	                <li id="user_info">
 				{l s='Welcome' mod='responsivetopbar'}, <span>{$cookie->customer_firstname} </span>
